@@ -15,6 +15,7 @@ import {
     Stack,
     useColorMode,
     Center,
+    HStack,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
@@ -38,12 +39,14 @@ export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-            <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+            <Box bg={useColorModeValue("gray.100", "gray.900")} px={10} pt={10}>
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-                    <Box>Logo</Box>
-                    <Box>About</Box>
-                    <Box>Projects</Box>
-                    <Box>Contact</Box>
+                    <HStack spacing={8}>
+                        <Link>Logo</Link>
+                        <Link>About</Link>
+                        <Link>Projects</Link>
+                        <Link>Contact</Link>
+                    </HStack>
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
                             <Button onClick={toggleColorMode}>

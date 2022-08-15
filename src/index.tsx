@@ -11,7 +11,13 @@ const colors = {
     },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+    colors,
+    fonts: {
+        heading: `'bitter', 'sans-serif'`,
+        body: `'bitter', 'sans-serif'`,
+    },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
