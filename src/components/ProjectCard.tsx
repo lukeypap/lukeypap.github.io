@@ -55,7 +55,7 @@ const ProjectCard = ({
                     </Text>
                     <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
                         {tech.map((item, id) => (
-                            <Badge px={2} py={1} fontWeight={"400"}>
+                            <Badge px={2} py={1} fontWeight={"400"} key={id}>
                                 {item}
                             </Badge>
                         ))}

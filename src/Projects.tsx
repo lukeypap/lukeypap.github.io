@@ -14,6 +14,7 @@ const Projects = () => {
                         title={project.name}
                         description={project.description}
                         tech={project.techUsed}
+                        key={id}
                     />
                 ))}
             </Container>
