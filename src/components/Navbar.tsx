@@ -2,22 +2,16 @@ import { ReactNode } from "react";
 import {
     Box,
     Flex,
-    Avatar,
     Link,
     Button,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuDivider,
-    useDisclosure,
     useColorModeValue,
     Stack,
     useColorMode,
-    Center,
     HStack,
+    Text,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { Link as ReactScrollLink, animateScroll as scroll } from "react-scroll";
 
 const NavLink = ({ children }: { children: ReactNode }) => (
     <Link
@@ -36,21 +30,30 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 export default function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode();
-    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-            <Box bg={useColorModeValue("gray.100", "gray.900")} px={10} pt={10}>
+            <Box bg={useColorModeValue("gray.50", "gray.800")} px={10} pt={10}>
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-                    <HStack spacing={8}>
-                        <Link>Logo</Link>
-                        <Link>About</Link>
-                        <Link>Projects</Link>
-                        <Link>Contact</Link>
+                    <HStack spacing={8} pl={8}>
+                        <Link _hover={{ textDecor: "none" }}>About</Link>
+                        <ReactScrollLink
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Projects
+                        </ReactScrollLink>
+                        <Link _hover={{ textDecor: "none" }}>Contact</Link>
                     </HStack>
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
-                            <Button onClick={toggleColorMode}>
+                            <Button onClick={toggleColorMode} variant="outline">
                                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                            </Button>
+                            <Button variant="outline">
+                                <Text>CV</Text>
                             </Button>
                         </Stack>
                     </Flex>

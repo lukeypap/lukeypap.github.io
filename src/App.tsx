@@ -1,11 +1,18 @@
 import NavBar from "./components/Navbar";
+import Header from "./Header";
+import { Box } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
+import Projects from "./Projects";
 
 function App() {
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
-        <div>
+        <Box bg={colorMode === "light" ? "gray.50" : "gray.800"}>
             <NavBar />
-            <h1>Hello World!</h1>
-        </div>
+            <Header />
+            <Projects />
+        </Box>
     );
 }
 
