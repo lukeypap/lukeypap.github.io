@@ -37,7 +37,8 @@ export default function NavBar() {
                     <HStack spacing={8} pl={8} maxW="50vw">
                         <Link _hover={{ textDecor: "none" }}>About</Link>
                         <ReactScrollLink
-                            to="about"
+                            id="navbar"
+                            to="projects"
                             spy={true}
                             smooth={true}
                             offset={-70}
