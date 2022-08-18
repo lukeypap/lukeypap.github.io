@@ -10,6 +10,7 @@ import {
     Text,
     useColorModeValue,
 } from "@chakra-ui/react";
+import { ReactEventHandler, useState } from "react";
 
 const ProjectCard = ({
     title,
@@ -22,18 +23,34 @@ const ProjectCard = ({
     tech: string[];
     projectImage: string;
 }) => {
+    const [hover, setHover] = useState(false);
+
+    const onMouseEnter = (e: any) => {
+        setHover(true);
+    };
+
+    const onMouseLeave = (e: any) => {
+        setHover(false);
+    };
+
     return (
         <Box py={6} mt={5}>
-            <Stack direction={{ base: "column", md: "row" }} position={"relative"}>
+            <Stack direction={{ base: "column", md: "row" }} position={"relative"} w={"95%"}>
                 <Flex flex={1}>
                     <Image
                         objectFit="cover"
                         boxSize="100%"
-                        w="800px"
+                        w={{ sm: "100%", md: "440px", xl: "800px" }}
                         src={projectImage}
                         boxShadow={"2xl"}
                         border="1px"
                         borderColor="gray.900"
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                        style={{
+                            transform: `${hover ? "scale(1.05,1.05)" : "scale(1)"}`,
+                            transition: "1s",
+                        }}
                     />
                 </Flex>
                 <Stack
@@ -45,7 +62,8 @@ const ProjectCard = ({
                     padding={4}
                     position={"absolute"}
                     right="0px"
-                    top="150px"
+                    top="20%"
+                    style={{ opacity: hover ? "0.20" : "1", transition: "opacity 1s" }}
                 >
                     <Stack
                         flex={1}

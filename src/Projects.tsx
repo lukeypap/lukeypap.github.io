@@ -9,7 +9,7 @@ import { Link as ReactScrollLink, animateScroll as scroll } from "react-scroll";
 const Projects = () => {
     return (
         <Box mt="80px" position={"relative"}>
-            <Container maxWidth={"6xl"} position={"absolute"} left="20%">
+            <Container maxWidth={"6xl"} position={"absolute"} pl="100px">
                 <Text fontSize={"5xl"} id="projects" display="inline-block">
                     Projects
                 </Text>

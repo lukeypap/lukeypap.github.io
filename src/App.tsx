@@ -12,7 +12,6 @@ function App() {
         <Box bg={colorMode === "light" ? "gray.50" : "gray.800"}>
             <NavBar />
             <Header />
-            <Image src={headerSVG} />
             <Projects />
         </Box>
     );
