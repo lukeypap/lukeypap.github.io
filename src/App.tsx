@@ -9,11 +9,11 @@ function App() {
     const { colorMode, toggleColorMode } = useColorMode();
 
     return (
-        <Box bg={colorMode === "light" ? "gray.50" : "gray.800"}>
+        <>
             <NavBar />
             <Header />
             <Projects />
-        </Box>
+        </>
     );
 }
 
