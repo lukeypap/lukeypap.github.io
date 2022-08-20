@@ -17,11 +17,13 @@ const ProjectCard = ({
     description,
     tech,
     projectImage,
+    projectDemoLink,
 }: {
     title: string;
     description: string;
     tech: string[];
     projectImage: string;
+    projectDemoLink: string;
 }) => {
     const [hover, setHover] = useState(false);
 
@@ -125,7 +127,7 @@ const ProjectCard = ({
                                     bg: "blue.500",
                                 }}
                             >
-                                Demo
+                                <Link href={projectDemoLink}>Demo</Link>
                             </Button>
                         </Stack>
                     </Stack>

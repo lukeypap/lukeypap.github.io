@@ -20,6 +20,7 @@
         "@types/node": "^16.11.48",
         "@types/react": "^18.0.17",
         "@types/react-dom": "^18.0.6",
+        "animate.css": "^4.1.1",
         "framer-motion": "^7.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -56,6 +57,7 @@
     },
     "devDependencies": {
         "@types/react-scroll": "^1.8.4",
-        "gh-pages": "^4.0.0"
+        "gh-pages": "^4.0.0",
+        "sass": "^1.54.5"
     }
 }

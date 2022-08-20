@@ -32,6 +32,7 @@ const Projects = () => {
                         description={project.description}
                         tech={project.techUsed}
                         projectImage={project.screenshotLocation}
+                        projectDemoLink={project.demoLink}
                         key={id}
                     />
                 ))}
