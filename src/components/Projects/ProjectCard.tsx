@@ -11,6 +11,8 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProjectCard = ({
     title,
@@ -22,10 +24,12 @@ const ProjectCard = ({
     title: string;
     description: string;
     tech: string[];
-    projectImage: string;
+    projectImage: string[];
     projectDemoLink: string;
 }) => {
     const [hover, setHover] = useState(false);
+    const [currentImage, setCurrentImage] = useState(projectImage[0]);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const onMouseEnter = (e: any) => {
         setHover(true);
@@ -35,15 +39,25 @@ const ProjectCard = ({
         setHover(false);
     };
 
+    const handlePictureChange = (direction: string) => {
+        if (currentImageIndex === projectImage.length - 1) {
+            setCurrentImage(projectImage[0]);
+            setCurrentImageIndex(0);
+        } else {
+            setCurrentImage(projectImage[currentImageIndex + 1]);
+            setCurrentImageIndex(currentImageIndex + 1);
+        }
+    };
+
     return (
         <Box py={6} mt={5}>
             <Stack direction={{ base: "column", md: "row" }} position={"relative"} w={"95%"}>
-                <Flex flex={1}>
+                <Flex flex={1} minH="400px" maxH="400px">
                     <Image
                         objectFit="cover"
                         boxSize="100%"
                         w={{ sm: "100%", md: "440px", xl: "800px" }}
-                        src={projectImage}
+                        src={currentImage}
                         boxShadow={"2xl"}
                         border="1px"
                         borderColor="gray.900"
@@ -54,7 +68,14 @@ const ProjectCard = ({
                             transition: "1s",
                         }}
                     />
+                    <Button onClick={() => handlePictureChange("left")}>
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </Button>
+                    <Button onClick={() => handlePictureChange("right")}>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                    </Button>
                 </Flex>
+
                 <Stack
                     w={{ sm: "100%", md: "440px" }}
                     height={{ sm: "476px", md: "15rem" }}
