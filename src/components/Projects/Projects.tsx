@@ -1,10 +1,10 @@
-import { Box, Text, Container, Image } from "@chakra-ui/react";
-import ProjectCard from "./components/ProjectCard";
-import { projectList } from "./projectInfo";
-import projectWaveSvg from "./resources/cyanWave.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Container, Image, Text } from "@chakra-ui/react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { Link as ReactScrollLink, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link as ReactScrollLink } from "react-scroll";
+import { projectList } from "../../data/projectInfo";
+import ProjectCard from "./ProjectCard";
+import projectWaveSvg from "../../resources/cyanWave.svg";
 
 const Projects = () => {
     return (

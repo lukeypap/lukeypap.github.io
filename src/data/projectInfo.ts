@@ -1,5 +1,5 @@
-import dijkstraScreenshot from "./resources/Screenshot 2022-08-17 205624.png";
-import ticketSystemScreenshot from "./resources/ticket-systemss.png";
+import dijkstraScreenshot from "../resources/Screenshot 2022-08-17 205624.png";
+import ticketSystemScreenshot from "../resources/ticket-systemss.png";
 
 export const projectList = [
     {

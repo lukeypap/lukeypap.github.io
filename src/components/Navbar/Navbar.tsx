@@ -1,33 +1,17 @@
-import { ReactNode } from "react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
     Box,
-    Flex,
-    Link,
     Button,
-    useColorModeValue,
-    Stack,
-    useColorMode,
+    Flex,
     HStack,
+    Link,
+    Stack,
     Text,
+    useColorMode,
+    useColorModeValue,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link as ReactScrollLink, animateScroll as scroll } from "react-scroll";
-import "./AnimateLetters/textAnimation.scss";
-
-const NavLink = ({ children }: { children: ReactNode }) => (
-    <Link
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={{
-            textDecoration: "none",
-            bg: useColorModeValue("gray.200", "gray.700"),
-        }}
-        href={"#"}
-    >
-        {children}
-    </Link>
-);
+import { Link as ReactScrollLink } from "react-scroll";
+import "../AnimateLetters/textAnimation.scss";
 
 export default function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode();

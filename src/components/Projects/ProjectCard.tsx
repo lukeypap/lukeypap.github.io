@@ -10,7 +10,7 @@ import {
     Text,
     useColorModeValue,
 } from "@chakra-ui/react";
-import { ReactEventHandler, useState } from "react";
+import { useState } from "react";
 
 const ProjectCard = ({
     title,

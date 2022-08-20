@@ -1,18 +1,14 @@
-import { Text, Box, Container, Image, Button } from "@chakra-ui/react";
-import headerSVG from "./resources/triangleAsymmetricalNegative.svg";
-import { Link as ReactScrollLink, animateScroll as scroll } from "react-scroll";
-import { randomColor } from "@chakra-ui/theme-tools";
-import "./components/header.scss";
-import { Fade, ScaleFade, Slide, SlideFade, useColorMode } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import AnimateLetters from "./components/AnimateLetters/AnimateLetters";
-import "./components/AnimateLetters/textAnimation.scss";
-import "./styles/headerStyles.scss";
+import { Box, Button, Container, Image, Text } from "@chakra-ui/react";
+import { useState } from "react";
+import { Link as ReactScrollLink } from "react-scroll";
+import AnimateLetters from "../AnimateLetters/AnimateLetters";
+import "../AnimateLetters/textAnimation.scss";
+import "../Header/header.scss";
+import headerSVG from "../../resources/triangleAsymmetricalNegative.svg";
 
 const Header = () => {
     const [letterClass, setLetterClass] = useState("text-animate");
     const nameArray = ["L", "u", "k", "e"];
-    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <>

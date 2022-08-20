@@ -1,4 +1,3 @@
-import React from "react";
 import "./textAnimation.scss";
 import { Text } from "@chakra-ui/react";
 

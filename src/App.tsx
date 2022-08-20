@@ -1,8 +1,8 @@
-import NavBar from "./components/Navbar";
-import Header from "./Header";
-import { Box, Image } from "@chakra-ui/react";
+import NavBar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
+import { Box } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
-import Projects from "./Projects";
+import Projects from "./components/Projects/Projects";
 import bgSvg from "./resources/bgdots2.svg";
 import bgSvgLight from "./resources/bgdotslight.svg";
 
