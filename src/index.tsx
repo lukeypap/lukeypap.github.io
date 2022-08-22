@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
-
+import { TerminalContextProvider } from "react-terminal";
 const colors = {
     brand: {
         900: "#1a365d",
@@ -22,8 +22,10 @@ const theme = extendTheme({
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
     <React.StrictMode>
-        <ChakraProvider theme={theme}>
-            <App />
-        </ChakraProvider>
+        <TerminalContextProvider>
+            <ChakraProvider theme={theme}>
+                <App />
+            </ChakraProvider>
+        </TerminalContextProvider>
     </React.StrictMode>
 );

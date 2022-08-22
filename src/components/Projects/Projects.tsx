@@ -8,7 +8,14 @@ import projectWaveSvg from "../../resources/cyanWave.svg";
 
 const Projects = () => {
     return (
-        <Box mt="80px" position={"relative"} w={"100%"} display={"flex"} justifyContent={"center"}>
+        <Box
+            mt="80px"
+            position={"relative"}
+            w={"100%"}
+            display={"flex"}
+            justifyContent={"center"}
+            height={"1600px"}
+        >
             <Container maxWidth={"6xl"} position={"absolute"} pl="100px" margin={"0 auto"}>
                 <Text fontSize={"5xl"} id="projects" display="inline-block">
                     Projects
@@ -37,7 +44,7 @@ const Projects = () => {
                     />
                 ))}
             </Container>
-            <Image src={projectWaveSvg} />
+            <Image src={projectWaveSvg} objectFit={"cover"} h="28%" w="100%" />
         </Box>
     );
 };

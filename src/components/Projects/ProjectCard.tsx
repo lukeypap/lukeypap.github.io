@@ -40,18 +40,24 @@ const ProjectCard = ({
     };
 
     const handlePictureChange = (direction: string) => {
-        if (currentImageIndex === projectImage.length - 1) {
+        if (direction === "forward" && currentImageIndex === projectImage.length - 1) {
             setCurrentImage(projectImage[0]);
             setCurrentImageIndex(0);
-        } else {
+        } else if (direction === "back" && currentImageIndex === 0) {
+            setCurrentImage(projectImage[projectImage.length - 1]);
+            setCurrentImageIndex(projectImage.length - 1);
+        } else if (direction === "forward") {
             setCurrentImage(projectImage[currentImageIndex + 1]);
             setCurrentImageIndex(currentImageIndex + 1);
+        } else {
+            setCurrentImage(projectImage[currentImageIndex - 1]);
+            setCurrentImageIndex(currentImageIndex - 1);
         }
     };
 
     return (
         <Box py={6} mt={5}>
-            <Stack direction={{ base: "column", md: "row" }} position={"relative"} w={"95%"}>
+            <Stack direction={{ base: "column", md: "row" }} position={"relative"}>
                 <Flex flex={1} minH="400px" maxH="400px">
                     <Image
                         objectFit="cover"
@@ -68,12 +74,36 @@ const ProjectCard = ({
                             transition: "1s",
                         }}
                     />
-                    <Button onClick={() => handlePictureChange("left")}>
-                        <FontAwesomeIcon icon={faArrowLeft} />
-                    </Button>
-                    <Button onClick={() => handlePictureChange("right")}>
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </Button>
+                    <Stack direction={"row"} position="absolute" top="20px" left="10px">
+                        <Box>
+                            <Text
+                                backgroundColor="blackAlpha.700"
+                                textAlign={"center"}
+                                borderRadius={"2xl"}
+                                p={"5px"}
+                            >
+                                {currentImageIndex + 1} / {projectImage.length}
+                            </Text>
+                        </Box>
+                        <Button
+                            onClick={() => handlePictureChange("back")}
+                            borderRadius="3xl"
+                            size="sm"
+                            bg="blackAlpha.700"
+                            _hover={{ bg: "blackAlpha.500" }}
+                        >
+                            <FontAwesomeIcon icon={faArrowLeft} />
+                        </Button>
+                        <Button
+                            onClick={() => handlePictureChange("forward")}
+                            borderRadius="3xl"
+                            size="sm"
+                            bg="blackAlpha.700"
+                            _hover={{ bg: "blackAlpha.500" }}
+                        >
+                            <FontAwesomeIcon icon={faArrowRight} />
+                        </Button>
+                    </Stack>
                 </Flex>
 
                 <Stack
@@ -82,7 +112,7 @@ const ProjectCard = ({
                     direction={{ base: "column", md: "row" }}
                     bg={useColorModeValue("white", "gray.900")}
                     boxShadow={"2xl"}
-                    padding={4}
+                    p={4}
                     position={"absolute"}
                     right="0px"
                     top="20%"
