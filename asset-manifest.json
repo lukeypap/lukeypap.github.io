@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba1e1b73.css",
-    "main.js": "/static/js/main.43022fda.js",
+    "main.css": "/static/css/main.e624bf32.css",
+    "main.js": "/static/js/main.16b3c0cb.js",
+    "static/media/ticket-systemss1.png": "/static/media/ticket-systemss1.ea6de504c10d9d4da8bf.png",
     "static/media/ticket-systemss.png": "/static/media/ticket-systemss.2e5ff72b501ba0704d12.png",
+    "static/media/ticket-systemss3.png": "/static/media/ticket-systemss3.c350cf1b183da9c024dd.png",
     "static/media/Screenshot 2022-08-17 205624.png": "/static/media/Screenshot 2022-08-17 205624.e80e56b690c7decafcbf.png",
+    "static/media/ticket-systemss2.png": "/static/media/ticket-systemss2.710f418c4aeb8ba94879.png",
     "static/media/bgdotslight.svg": "/static/media/bgdotslight.b6d4f51b0fa83aae771ea30cdced6666.svg",
     "static/media/bgdots2.svg": "/static/media/bgdots2.e83cddfa05f643608ca27ea5d1a89c8d.svg",
     "index.html": "/index.html",
     "static/media/triangleAsymmetricalNegative.svg": "/static/media/triangleAsymmetricalNegative.de438b7b898c6fd94fcb02e9d52ed486.svg",
     "static/media/cyanWave.svg": "/static/media/cyanWave.907bf9ac4f7fe386452fc2644b5c9e77.svg",
-    "main.ba1e1b73.css.map": "/static/css/main.ba1e1b73.css.map",
-    "main.43022fda.js.map": "/static/js/main.43022fda.js.map"
+    "main.e624bf32.css.map": "/static/css/main.e624bf32.css.map",
+    "main.16b3c0cb.js.map": "/static/js/main.16b3c0cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba1e1b73.css",
-    "static/js/main.43022fda.js"
+    "static/css/main.e624bf32.css",
+    "static/js/main.16b3c0cb.js"
   ]
 }
