@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e624bf32.css",
-    "main.js": "/static/js/main.16b3c0cb.js",
+    "main.js": "/static/js/main.b947d703.js",
     "static/media/ticket-systemss1.png": "/static/media/ticket-systemss1.ea6de504c10d9d4da8bf.png",
     "static/media/ticket-systemss.png": "/static/media/ticket-systemss.2e5ff72b501ba0704d12.png",
     "static/media/ticket-systemss3.png": "/static/media/ticket-systemss3.c350cf1b183da9c024dd.png",
@@ -9,14 +9,16 @@
     "static/media/ticket-systemss2.png": "/static/media/ticket-systemss2.710f418c4aeb8ba94879.png",
     "static/media/bgdotslight.svg": "/static/media/bgdotslight.b6d4f51b0fa83aae771ea30cdced6666.svg",
     "static/media/bgdots2.svg": "/static/media/bgdots2.e83cddfa05f643608ca27ea5d1a89c8d.svg",
+    "static/media/layeredStepsContact.svg": "/static/media/layeredStepsContact.fa85de124c60c6d7dc5f6b2e5adae54a.svg",
     "index.html": "/index.html",
+    "static/media/singleWaveAbout.svg": "/static/media/singleWaveAbout.c2f15f07788a8622a18bfce8793c0a76.svg",
     "static/media/triangleAsymmetricalNegative.svg": "/static/media/triangleAsymmetricalNegative.de438b7b898c6fd94fcb02e9d52ed486.svg",
     "static/media/cyanWave.svg": "/static/media/cyanWave.907bf9ac4f7fe386452fc2644b5c9e77.svg",
     "main.e624bf32.css.map": "/static/css/main.e624bf32.css.map",
-    "main.16b3c0cb.js.map": "/static/js/main.16b3c0cb.js.map"
+    "main.b947d703.js.map": "/static/js/main.b947d703.js.map"
   },
   "entrypoints": [
     "static/css/main.e624bf32.css",
-    "static/js/main.16b3c0cb.js"
+    "static/js/main.b947d703.js"
   ]
 }
