@@ -75,7 +75,7 @@ export default function Footer() {
                 <Stack direction={"row"} spacing={6}>
                     <Link href={"#"}>Home</Link>
                     <Link href={"#"}>About</Link>
-                    <Link href={"#"}>Blog</Link>
+                    <Link href={"#"}>Projects</Link>
                     <Link href={"#"}>Contact</Link>
                 </Stack>
             </Container>
