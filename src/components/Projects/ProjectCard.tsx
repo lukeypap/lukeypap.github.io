@@ -10,26 +10,26 @@ import {
     Text,
     useColorModeValue,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useInView } from "framer-motion";
 
-const ProjectCard = ({
-    title,
-    description,
-    tech,
-    projectImage,
-    projectDemoLink,
-}: {
+interface props {
     title: string;
     description: string;
     tech: string[];
     projectImage: string[];
-    projectDemoLink: string;
-}) => {
+    githubLink: string;
+    demoInfo: { demoLink: string; demoable: boolean };
+}
+
+const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoInfo }: props) => {
     const [hover, setHover] = useState(false);
     const [currentImage, setCurrentImage] = useState(projectImage[0]);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const projectRef = useRef(null);
+    const projectIsInView = useInView(projectRef, { once: true });
 
     const onMouseEnter = (e: any) => {
         setHover(true);
@@ -56,7 +56,16 @@ const ProjectCard = ({
     };
 
     return (
-        <Box py={6} mt={5}>
+        <Box
+            py={6}
+            mt={5}
+            ref={projectRef}
+            style={{
+                transform: projectIsInView ? "none" : "translateY(70px)",
+                opacity: projectIsInView ? 1 : 0,
+                transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+            }}
+        >
             <Stack direction={{ base: "column", md: "row" }} position={"relative"}>
                 <Flex flex={1} minH="400px" maxH="400px">
                     <Image
@@ -66,6 +75,7 @@ const ProjectCard = ({
                         src={currentImage}
                         boxShadow={"2xl"}
                         border="1px"
+                        borderRadius="lg"
                         borderColor="gray.900"
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
@@ -116,6 +126,7 @@ const ProjectCard = ({
                     position={"absolute"}
                     right="0px"
                     top="20%"
+                    borderRadius={"lg"}
                     style={{ opacity: hover ? "0.20" : "1", transition: "opacity 1s" }}
                 >
                     <Stack
@@ -145,41 +156,45 @@ const ProjectCard = ({
                         </Stack>
 
                         <Stack
-                            width={"100%"}
                             mt={"2rem"}
                             direction={"row"}
                             padding={2}
-                            justifyContent={"space-between"}
+                            justifyContent={"center"}
                             alignItems={"center"}
                         >
-                            <Button
-                                flex={1}
-                                fontSize={"sm"}
-                                rounded={"full"}
-                                _focus={{
-                                    bg: "gray.200",
-                                }}
-                            >
-                                Github
-                            </Button>
-                            <Button
-                                flex={1}
-                                fontSize={"sm"}
-                                rounded={"full"}
-                                bg={"blue.400"}
-                                color={"white"}
-                                boxShadow={
-                                    "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-                                }
-                                _hover={{
-                                    bg: "blue.500",
-                                }}
-                                _focus={{
-                                    bg: "blue.500",
-                                }}
-                            >
-                                <Link href={projectDemoLink}>Demo</Link>
-                            </Button>
+                            <Link flex={1} href={githubLink}>
+                                <Button
+                                    fontSize={"sm"}
+                                    rounded={"full"}
+                                    _focus={{
+                                        bg: "gray.200",
+                                    }}
+                                    width={"100px"}
+                                >
+                                    Github
+                                </Button>
+                            </Link>
+                            <Link flex={1} href={demoInfo.demoLink}>
+                                <Button
+                                    fontSize={"sm"}
+                                    rounded={"full"}
+                                    bg={"blue.400"}
+                                    color={"white"}
+                                    boxShadow={
+                                        "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                                    }
+                                    _hover={{
+                                        bg: "blue.500",
+                                    }}
+                                    _focus={{
+                                        bg: "blue.500",
+                                    }}
+                                    disabled={!demoInfo.demoable}
+                                    width={"100px"}
+                                >
+                                    Demo
+                                </Button>
+                            </Link>
                         </Stack>
                     </Stack>
                 </Stack>

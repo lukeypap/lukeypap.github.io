@@ -16,7 +16,11 @@ export const projectList = [
             ticketSystemScreenshot2,
             ticketSystemScreenshot3,
         ],
-        demoLink: "",
+        githubLink: "https://github.com/lukeypap/ticket-system",
+        demo: {
+            demoLink: "",
+            demoable: true,
+        },
     },
     {
         name: "Dijkstra visualization",
@@ -24,13 +28,21 @@ export const projectList = [
             "A node based visualization of Dijkstra's algorithm using a start node and end node with the ability to add walls.",
         techUsed: ["React", "Styled Components"],
         screenshotLocation: [dijkstraScreenshot],
-        demoLink: "/path-finder",
+        githubLink: "https://github.com/lukeypap/path-finder",
+        demo: {
+            demoLink: "/path-finder",
+            demoable: true,
+        },
     },
     {
         name: "Tic-Tac-Toe with Minimax",
         description: "A classic game with the Minimax searching algorith implemented.",
         techUsed: ["Java"],
         screenshotLocation: [dijkstraScreenshot],
-        demoLink: "",
+        githubLink: "https://github.com/lukeypap/Tic-Tac-Toe-with-Minimax",
+        demo: {
+            demoLink: "",
+            demoable: false,
+        },
     },
 ];

@@ -5,6 +5,9 @@ import { Link as ReactScrollLink } from "react-scroll";
 import { projectList } from "../../data/projectInfo";
 import ProjectCard from "./ProjectCard";
 import projectWaveSvg from "../../resources/cyanWave.svg";
+import ProjectCardNew from "./ProjectCardNew";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const Projects = () => {
     return (
@@ -39,7 +42,8 @@ const Projects = () => {
                         description={project.description}
                         tech={project.techUsed}
                         projectImage={project.screenshotLocation}
-                        projectDemoLink={project.demoLink}
+                        demoInfo={project.demo}
+                        githubLink={project.githubLink}
                         key={id}
                     />
                 ))}

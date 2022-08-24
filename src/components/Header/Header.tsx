@@ -111,10 +111,10 @@ const Header = () => {
                         </Button>
                     </Box>
                     <Box
-                        h="600px"
+                        h="500px"
                         pr="100px"
                         w="50%"
-                        maxW="1000px"
+                        maxW="900px"
                         pt="20px"
                         style={{
                             animation: "fadeIn 1s",
