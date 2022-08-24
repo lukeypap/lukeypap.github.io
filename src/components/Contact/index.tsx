@@ -2,12 +2,13 @@ import { Box, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import layeredWavesAbout from "../../resources/layered-waves-about.svg";
 import singleWaveAbout from "../../resources/singleWaveAbout.svg";
+import layeredStepsContact from "../../resources/layeredStepsContact.svg";
 
-const About = () => {
+const Contact = () => {
     return (
         <Box
             h="1000px"
-            bgImage={singleWaveAbout}
+            bgImage={layeredStepsContact}
             backgroundRepeat={"no-repeat"}
             backgroundSize={"cover"}
             display={"flex"}
@@ -15,9 +16,9 @@ const About = () => {
         >
             <Container maxWidth={"6xl"} position={"absolute"} pl="100px" margin={"0 auto"}>
                 <Text fontSize={"5xl"} id="projects" display="inline-block">
-                    About
+                    Contact
                 </Text>
-                <Text display="inline-block" fontSize={"7xl"} color={"#C7DE50"} pr={"10px"}>
+                <Text display="inline-block" fontSize={"7xl"} color={"#8200D9"} pr={"10px"}>
                     .
                 </Text>
             </Container>
@@ -25,4 +26,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Contact;

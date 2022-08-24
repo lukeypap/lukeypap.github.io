@@ -8,6 +8,7 @@ import projectWaveSvg from "../../resources/cyanWave.svg";
 import ProjectCardNew from "./ProjectCardNew";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import ProjectCarousel from "./ProjectCarousel";
 
 const Projects = () => {
     return (
@@ -17,7 +18,7 @@ const Projects = () => {
             w={"100%"}
             display={"flex"}
             justifyContent={"center"}
-            height={"1600px"}
+            height={"1700px"}
         >
             <Container maxWidth={"6xl"} position={"absolute"} pl="100px" margin={"0 auto"}>
                 <Text fontSize={"5xl"} id="projects" display="inline-block">

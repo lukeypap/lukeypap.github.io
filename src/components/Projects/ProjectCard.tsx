@@ -74,7 +74,6 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
                         w={{ sm: "100%", md: "440px", xl: "800px" }}
                         src={currentImage}
                         boxShadow={"2xl"}
-                        border="1px"
                         borderRadius="lg"
                         borderColor="gray.900"
                         onMouseEnter={onMouseEnter}
@@ -118,7 +117,7 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
 
                 <Stack
                     w={{ sm: "100%", md: "440px" }}
-                    height={{ sm: "476px", md: "15rem" }}
+                    height={{ sm: "476px", md: "18rem" }}
                     direction={{ base: "column", md: "row" }}
                     bg={useColorModeValue("white", "gray.900")}
                     boxShadow={"2xl"}

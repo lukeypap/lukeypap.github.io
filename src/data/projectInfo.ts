@@ -8,7 +8,7 @@ export const projectList = [
     {
         name: "Ticket System",
         description:
-            "A simple ticket system that is used to track bugs and issues. Has a user management system with authentication.",
+            "A simple ticket system that is used to track bugs and issues. Has a user management system with authentication. Demo unavailable as this is still under development.",
         techUsed: ["React", "NestJS", "Postgresql", "ChakraUI"],
         screenshotLocation: [
             ticketSystemScreenshot,
@@ -36,7 +36,7 @@ export const projectList = [
     },
     {
         name: "Tic-Tac-Toe with Minimax",
-        description: "A classic game with the Minimax searching algorith implemented.",
+        description: "A Java command line game with the Minimax searching algorith implemented.",
         techUsed: ["Java"],
         screenshotLocation: [dijkstraScreenshot],
         githubLink: "https://github.com/lukeypap/Tic-Tac-Toe-with-Minimax",
