@@ -8,7 +8,6 @@ import headerSVG from "../../resources/triangleAsymmetricalNegative.svg";
 import { ReactTerminal } from "react-terminal";
 
 const Header = () => {
-    const [letterClass, setLetterClass] = useState("text-animate");
     const nameArray = ["L", "u", "k", "e"];
 
     const commands = {
@@ -72,7 +71,7 @@ const Header = () => {
                         >
                             My name is,
                         </Text>
-                        <AnimateLetters letterClass={letterClass} wordArray={nameArray} id={20} />
+                        <AnimateLetters wordArray={nameArray} id={20} color="red.600" />
                         <Text
                             pt={1}
                             pb={3}

@@ -2,23 +2,23 @@ import "./textAnimation.scss";
 import { Text } from "@chakra-ui/react";
 
 const AnimateLetters = ({
-    letterClass,
     wordArray,
     id,
+    color,
 }: {
-    letterClass: string;
     wordArray: string[];
     id: number;
+    color: string;
 }) => {
     return (
         <span>
             {wordArray.map((letter, i) => (
                 <Text
                     fontSize="5xl"
-                    color={"red.600"}
+                    color={color}
                     style={{ display: "inline-block" }}
                     key={letter + i}
-                    className={`${letterClass} _${i + id}`}
+                    className={`text-animate _${i + id}`}
                 >
                     {letter}
                 </Text>
