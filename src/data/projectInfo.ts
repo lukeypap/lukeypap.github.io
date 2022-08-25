@@ -38,7 +38,7 @@ export const projectList = [
         name: "Tic-Tac-Toe with Minimax",
         description: "A Java command line game with the Minimax searching algorith implemented.",
         techUsed: ["Java"],
-        screenshotLocation: [dijkstraScreenshot],
+        screenshotLocation: [],
         githubLink: "https://github.com/lukeypap/Tic-Tac-Toe-with-Minimax",
         demo: {
             demoLink: "",

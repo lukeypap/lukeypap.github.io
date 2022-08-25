@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import { TerminalContextProvider } from "react-terminal";
+import "@fontsource/raleway";
+
 const colors = {
     brand: {
         900: "#1a365d",
@@ -14,8 +16,8 @@ const colors = {
 const theme = extendTheme({
     colors,
     fonts: {
-        heading: `'bitter', 'sans-serif'`,
-        body: `'bitter', 'sans-serif'`,
+        heading: `'Raleway', 'sans-serif'`,
+        body: `'Raleway', 'sans-serif'`,
     },
 });
 

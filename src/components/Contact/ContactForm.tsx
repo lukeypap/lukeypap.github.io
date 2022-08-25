@@ -78,7 +78,9 @@ const ContactForm = () => {
                                                 _hover={{ border: "2px solid #8200D9" }}
                                                 leftIcon={<MdEmail color="#8200D9" size="20px" />}
                                             >
-                                                luke.pap@live.co.uk
+                                                <Link href="mailto:luke.pap@live.co.uk">
+                                                    luke.pap@live.co.uk
+                                                </Link>
                                             </Button>
                                             <Button
                                                 size="md"
@@ -172,6 +174,7 @@ const ContactForm = () => {
                                                     color="white"
                                                     _hover={{ bg: "#a330f0" }}
                                                     w="100%"
+                                                    disabled
                                                 >
                                                     Send Message
                                                 </Button>

@@ -75,7 +75,6 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
                         src={currentImage}
                         boxShadow={"2xl"}
                         borderRadius="lg"
-                        borderColor="gray.900"
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                         style={{
