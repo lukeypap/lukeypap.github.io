@@ -12,7 +12,7 @@ const Contact = () => {
 
     return (
         <Box
-            h="1000px"
+            h="1100px"
             bgImage={layeredStepsContact}
             backgroundRepeat={"no-repeat"}
             backgroundSize={"cover"}

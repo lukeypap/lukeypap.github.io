@@ -12,7 +12,7 @@ const Header = () => {
 
     const commands = {
         whoami: "lukepapaoikonomou",
-        commands: `whoami, about, projects`,
+        commands: `whoami, about, projects, contacts`,
         about: () =>
             scroller.scrollTo("about", {
                 smooth: true,
@@ -20,6 +20,10 @@ const Header = () => {
             }),
         projects: () =>
             scroller.scrollTo("projects", {
+                smooth: true,
+            }),
+        contact: () =>
+            scroller.scrollTo("contact", {
                 smooth: true,
             }),
         cd: (directory: any) => `changed path to ${directory}`,
@@ -40,6 +44,9 @@ const Header = () => {
                                 animationFillMode: "forwards",
                                 animationDelay: "0.5s",
                             }}
+                            borderBottom={"8px"}
+                            lineHeight="30px"
+                            borderColor={"#C53030"}
                         >
                             Hello
                         </Text>

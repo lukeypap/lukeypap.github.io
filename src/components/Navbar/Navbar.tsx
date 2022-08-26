@@ -21,7 +21,7 @@ export default function NavBar() {
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <HStack spacing={8} pl={8} maxW="50vw" id="navbar">
                         <ReactScrollLink
-                            to="about"
+                            to="projects"
                             spy={true}
                             smooth={true}
                             offset={-70}
@@ -29,18 +29,18 @@ export default function NavBar() {
                             className={`text-animate _${1}`}
                             style={{ cursor: "pointer" }}
                         >
-                            About
+                            Projects
                         </ReactScrollLink>
                         <ReactScrollLink
-                            to="projects"
+                            to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={200}
                             duration={500}
                             className={`text-animate _${2}`}
                             style={{ cursor: "pointer" }}
                         >
-                            Projects
+                            About
                         </ReactScrollLink>
                         <ReactScrollLink
                             to="contact"

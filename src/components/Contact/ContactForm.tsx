@@ -32,7 +32,7 @@ const ContactForm = () => {
         <Container
             maxW="full"
             centerContent
-            mt={"100px"}
+            mt={"150px"}
             ref={contactRef}
             style={{
                 transform: contactIsInView ? "none" : "translateY(70px)",
