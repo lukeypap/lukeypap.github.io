@@ -15,7 +15,7 @@ const About = () => {
 
     return (
         <Box
-            h="1500px"
+            h="1400px"
             bgImage={singleWaveAbout}
             backgroundRepeat={"no-repeat"}
             backgroundSize={"cover"}
@@ -71,7 +71,7 @@ const About = () => {
                                     transform: "scale(1.01)",
                                     color: `${colorMode === "dark" ? "gray.200" : ""}`,
                                 }}
-                                style={{ transition: "1s" }}
+                                style={{ transition: "0.5s" }}
                             >
                                 I've always been interested in learning to code and 2 years ago when
                                 the pandemic hit the UK I decided to use my time to learn to code.
@@ -86,7 +86,7 @@ const About = () => {
                                     transform: "scale(1.01)",
                                     color: `${colorMode === "dark" ? "gray.200" : ""}`,
                                 }}
-                                style={{ transition: "1s" }}
+                                style={{ transition: "0.5s" }}
                             >
                                 At the same time I was working as an IT tech for a company which
                                 required me to do lots of repetitive taks, this led me onto Python.
@@ -100,7 +100,7 @@ const About = () => {
                                     transform: "scale(1.01)",
                                     color: `${colorMode === "dark" ? "gray.200" : ""}`,
                                 }}
-                                style={{ transition: "1s" }}
+                                style={{ transition: "0.5s" }}
                             >
                                 From creating my scripts I learned about API's and the wonderul
                                 world of web development! After reading lots of tutorials and
@@ -115,7 +115,7 @@ const About = () => {
                                     transform: "scale(1.01)",
                                     color: `${colorMode === "dark" ? "gray.200" : ""}`,
                                 }}
-                                style={{ transition: "1s" }}
+                                style={{ transition: "0.5s" }}
                             >
                                 After lots of trial and error and thinking, why doesn't state work
                                 like it does in Java? Why do I have to useState? It finally clicked,
@@ -128,7 +128,7 @@ const About = () => {
                                     transform: "scale(1.01)",
                                     color: `${colorMode === "dark" ? "gray.200" : ""}`,
                                 }}
-                                style={{ transition: "1s" }}
+                                style={{ transition: "0.5s" }}
                             >
                                 This leads us to today where I'm still using React to build
                                 interactive web apps. The most recent project I've been working on

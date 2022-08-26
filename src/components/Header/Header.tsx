@@ -12,7 +12,7 @@ const Header = () => {
 
     const commands = {
         whoami: "lukepapaoikonomou",
-        commands: `whoami, about, projects, contacts`,
+        commands: `whoami, about, projects, contact`,
         about: () =>
             scroller.scrollTo("about", {
                 smooth: true,

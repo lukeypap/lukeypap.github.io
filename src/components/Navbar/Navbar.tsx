@@ -17,7 +17,7 @@ export default function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
         <>
-            <Box bg={useColorModeValue("white", "gray.800")} px={10} pt={10}>
+            <Box px={10} pt={10}>
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <HStack spacing={8} pl={8} maxW="50vw" id="navbar">
                         <ReactScrollLink
