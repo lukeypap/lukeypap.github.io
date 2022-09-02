@@ -21,7 +21,7 @@ const Projects = () => {
             w={"100%"}
             display={"flex"}
             justifyContent={"center"}
-            height={"900px"}
+            height={{ base: "1800px", md: "800px" }}
             ref={projectHeaderRef}
             id="projects"
         >

@@ -119,67 +119,83 @@ const ContactForm = () => {
                             <WrapItem>
                                 <Box bg="white" borderRadius="lg">
                                     <Box m={8} color="#0B0E3F">
-                                        <VStack spacing={5}>
-                                            <FormControl id="name">
-                                                <FormLabel fontSize={"sm"}>Full Name</FormLabel>
-                                                <InputGroup bg="gray.50">
-                                                    <InputLeftElement
-                                                        pointerEvents="none"
-                                                        children={<FontAwesomeIcon icon={faUser} />}
-                                                    />
-                                                    <Input
-                                                        type="text"
-                                                        size="md"
+                                        <form
+                                            accept-charset="utf-8"
+                                            action="https://formspree.io/f/mqkjekwo"
+                                            method="post"
+                                        >
+                                            <VStack spacing={5}>
+                                                <FormControl id="name" accept-charset="utf-8">
+                                                    <FormLabel fontSize={"sm"}>Full Name</FormLabel>
+                                                    <InputGroup bg="gray.50">
+                                                        <InputLeftElement
+                                                            pointerEvents="none"
+                                                            children={
+                                                                <FontAwesomeIcon icon={faUser} />
+                                                            }
+                                                        />
+                                                        <Input
+                                                            type="text"
+                                                            size="md"
+                                                            borderColor="gray.300"
+                                                            border="1px"
+                                                            name="name"
+                                                            isRequired
+                                                        />
+                                                    </InputGroup>
+                                                </FormControl>
+                                                <FormControl id="email">
+                                                    <FormLabel fontSize={"sm"}>Email</FormLabel>
+                                                    <InputGroup bg="gray.50" borderRadius={"2xl"}>
+                                                        <InputLeftElement
+                                                            pointerEvents="none"
+                                                            children={
+                                                                <FontAwesomeIcon
+                                                                    icon={faEnvelope}
+                                                                />
+                                                            }
+                                                        />
+                                                        <Input
+                                                            type="email"
+                                                            size="md"
+                                                            borderColor="gray.300"
+                                                            border="1px"
+                                                            name="_replyto"
+                                                            isRequired
+                                                        />
+                                                    </InputGroup>
+                                                </FormControl>
+                                                <FormControl id="message">
+                                                    <FormLabel fontSize={"sm"}>Message</FormLabel>
+                                                    <Textarea
+                                                        fontSize={"sm"}
+                                                        bg="gray.50"
+                                                        borderRadius={"lg"}
+                                                        _hover={{
+                                                            borderRadius: "gray.300",
+                                                        }}
+                                                        placeholder="Type your message in here..."
                                                         borderColor="gray.300"
                                                         border="1px"
+                                                        name="message"
+                                                        isRequired
                                                     />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl id="email">
-                                                <FormLabel fontSize={"sm"}>Email</FormLabel>
-                                                <InputGroup bg="gray.50" borderRadius={"2xl"}>
-                                                    <InputLeftElement
-                                                        pointerEvents="none"
-                                                        children={
-                                                            <FontAwesomeIcon icon={faEnvelope} />
-                                                        }
-                                                    />
-                                                    <Input
-                                                        type="text"
-                                                        size="md"
-                                                        borderColor="gray.300"
-                                                        border="1px"
-                                                    />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl id="message">
-                                                <FormLabel fontSize={"sm"}>Message</FormLabel>
-                                                <Textarea
-                                                    fontSize={"sm"}
-                                                    bg="gray.50"
-                                                    borderRadius={"lg"}
-                                                    _hover={{
-                                                        borderRadius: "gray.300",
-                                                    }}
-                                                    placeholder="Type your message in here..."
-                                                    borderColor="gray.300"
-                                                    border="1px"
-                                                />
-                                            </FormControl>
-                                            <FormControl id="name" float="right">
-                                                <Button
-                                                    mt={"15px"}
-                                                    variant="solid"
-                                                    bg="#8200D9"
-                                                    color="white"
-                                                    _hover={{ bg: "#a330f0" }}
-                                                    w="100%"
-                                                    disabled
-                                                >
-                                                    Send Message
-                                                </Button>
-                                            </FormControl>
-                                        </VStack>
+                                                </FormControl>
+                                                <FormControl id="name" float="right">
+                                                    <Button
+                                                        mt={"15px"}
+                                                        variant="solid"
+                                                        bg="#8200D9"
+                                                        color="white"
+                                                        _hover={{ bg: "#a330f0" }}
+                                                        w="100%"
+                                                        type="submit"
+                                                    >
+                                                        Send Message
+                                                    </Button>
+                                                </FormControl>
+                                            </VStack>
+                                        </form>
                                     </Box>
                                 </Box>
                             </WrapItem>
