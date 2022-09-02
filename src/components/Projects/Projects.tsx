@@ -1,13 +1,13 @@
-import { Box, Container, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link as ReactScrollLink } from "react-scroll";
 import { projectList } from "../../data/projectInfo";
-import ProjectCard from "./ProjectCard";
 import projectWaveSvg from "../../resources/cyanWave.svg";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
+import ProjectCardNew from "./ProjectCardNew";
 
 const Projects = () => {
     const headerArray = ["P", "r", "o", "j", "e", "c", "t", "s"];
@@ -21,12 +21,12 @@ const Projects = () => {
             w={"100%"}
             display={"flex"}
             justifyContent={"center"}
-            height={"1700px"}
+            height={"900px"}
             ref={projectHeaderRef}
             id="projects"
         >
             {projectHeaderIsInView ? (
-                <Container maxWidth={"6xl"} position={"absolute"} pl="100px" margin={"0 auto"}>
+                <Container maxWidth={"6xl"} position={"absolute"}>
                     <AnimateLetters wordArray={headerArray} color="" id={1} />
                     <Text
                         display="inline-block"
@@ -63,8 +63,29 @@ const Projects = () => {
                             style={{ marginBottom: "2px" }}
                         />
                     </ReactScrollLink>
-                    {projectList.map((project, id) => (
-                        <ProjectCard
+                    <Flex justifyContent={"flex-start"}>
+                        <SimpleGrid
+                            columns={{ sm: 1, md: 3 }}
+                            gap={4}
+                            mt={6}
+                            alignItems={"flex-start"}
+                        >
+                            {projectList.map((project, id) => (
+                                <ProjectCardNew
+                                    title={project.name}
+                                    description={project.description}
+                                    tech={project.techUsed}
+                                    projectImage={project.screenshotLocation}
+                                    demoInfo={project.demo}
+                                    githubLink={project.githubLink}
+                                    key={id}
+                                    timeScale={id}
+                                />
+                            ))}
+                        </SimpleGrid>
+                    </Flex>
+                    {/* {projectList.map((project, id) => (
+                        <ProjectCardNew
                             title={project.name}
                             description={project.description}
                             tech={project.techUsed}
@@ -73,13 +94,13 @@ const Projects = () => {
                             githubLink={project.githubLink}
                             key={id}
                         />
-                    ))}
+                    ))} */}
                 </Container>
             ) : (
                 ""
             )}
 
-            <Image src={projectWaveSvg} objectFit={"cover"} h="28%" w="100%" />
+            <Image src={projectWaveSvg} objectFit={"cover"} h="50%" w="100%" />
         </Box>
     );
 };

@@ -57,7 +57,7 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
 
     return (
         <Box
-            py={6}
+            my={6}
             mt={5}
             ref={projectRef}
             style={{
@@ -67,10 +67,14 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
             }}
         >
             <Stack direction={{ base: "column", md: "row" }} position={"relative"}>
-                <Flex flex={1} minH="400px" maxH="400px">
+                <Flex
+                    flex={1}
+                    minH="400px"
+                    maxH="400px"
+                    w={{ sm: "100%", md: "440px", xl: "800px" }}
+                >
                     <Image
                         objectFit="cover"
-                        boxSize="100%"
                         w={{ sm: "100%", md: "440px", xl: "800px" }}
                         src={currentImage}
                         boxShadow={"2xl"}
@@ -116,12 +120,12 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
 
                 <Stack
                     w={{ sm: "100%", md: "440px" }}
-                    height={{ sm: "476px", md: "18rem" }}
+                    height={{ md: "18rem" }}
                     direction={{ base: "column", md: "row" }}
                     bg={useColorModeValue("white", "gray.900")}
+                    position={"absolute"}
                     boxShadow={"2xl"}
                     p={4}
-                    position={"absolute"}
                     right="0px"
                     top="20%"
                     borderRadius={"lg"}
@@ -140,6 +144,7 @@ const ProjectCard = ({ title, description, tech, projectImage, githubLink, demoI
                         </Heading>
                         <Text
                             textAlign={"center"}
+                            fontSize={"sm"}
                             color={useColorModeValue("gray.700", "gray.400")}
                             px={3}
                         >

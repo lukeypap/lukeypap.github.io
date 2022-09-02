@@ -3,7 +3,15 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import singleWaveAbout from "../../resources/singleWaveAbout.svg";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
-import { SiReact, SiNextdotjs, SiJava, SiJavascript, SiTypescript, SiPython } from "react-icons/si";
+import {
+    SiReact,
+    SiNextdotjs,
+    SiJava,
+    SiTypescript,
+    SiPython,
+    SiPostgresql,
+    SiTailwindcss,
+} from "react-icons/si";
 import TechIcon from "./TechIcon";
 
 const About = () => {
@@ -11,7 +19,15 @@ const About = () => {
     const aboutHeaderRef = useRef(null);
     const aboutHeaderIsInView = useInView(aboutHeaderRef, { once: true, amount: 0.2 });
     const { colorMode, toggleColorMode } = useColorMode();
-    const iconArray = [SiReact, SiNextdotjs, SiJava, SiJavascript, SiTypescript, SiPython];
+    const iconArray = [
+        SiReact,
+        SiNextdotjs,
+        SiJava,
+        SiTypescript,
+        SiPython,
+        SiPostgresql,
+        SiTailwindcss,
+    ];
 
     return (
         <Box
@@ -74,11 +90,11 @@ const About = () => {
                                 style={{ transition: "0.5s" }}
                             >
                                 I've always been interested in learning to code and 2 years ago when
-                                the pandemic hit the UK I decided to use my time to learn to code.
-                                I'd dabbled in a bit of Java before so decided to begin there. After
-                                a few weeks I managed to create my first app a simple command line
-                                Tic-Tac-Toe game. I continued to learn Java for a few months
-                                grasping all the basic concepts and moving onto design patterns.
+                                the pandemic hit the UK I decided to use my time to learn. After a
+                                few weeks I managed to create my first app in Java, a simple command
+                                line Tic-Tac-Toe game. I continued to learn Java for a few months
+                                grasping all the basic concepts and moving onto more advanced
+                                topics.
                             </Text>
                             <Text
                                 mb={"20px"}
@@ -105,9 +121,9 @@ const About = () => {
                                 From creating my scripts I learned about API's and the wonderul
                                 world of web development! After reading lots of tutorials and
                                 documentation I built my first app in Javascript, a Dijkstra
-                                visualisation app. I decided to use React for this project because I
-                                was told this was the trendy framework to pick, I had no idea what I
-                                got myself into...
+                                visualisation app. I decided to use React for this project because
+                                of its component based theme, I had no idea what I got myself
+                                into...
                             </Text>
                             <Text
                                 mb={"20px"}
@@ -133,9 +149,8 @@ const About = () => {
                                 This leads us to today where I'm still using React to build
                                 interactive web apps. The most recent project I've been working on
                                 is a Ticket System, see my projects section for more info! Thank you
-                                for taking the time to read this and stop by. Don't hesitate to get
-                                in contact, you can use my form or click my email at the bottom of
-                                this page. Bye!
+                                for stopping by. Don't hesitate to get in contact, you can use my
+                                form or click my email at the bottom of this page. Bye!
                             </Text>
                         </Container>
                         <Container textAlign={"center"}>
