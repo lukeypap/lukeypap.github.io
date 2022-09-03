@@ -1,21 +1,12 @@
 import {
-    Box,
     Button,
-    Center,
-    Image,
     Modal,
     ModalBody,
-    ModalCloseButton,
     ModalContent,
     ModalFooter,
     ModalHeader,
     ModalOverlay,
-    Stack,
-    Text,
 } from "@chakra-ui/react";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -36,25 +27,6 @@ interface projectInfo {
 }
 
 const ProjectModal = ({ isOpen, onClose, projectInfo }: props) => {
-    const [currentImage, setCurrentImage] = useState(projectInfo.projectImage[0]);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const handlePictureChange = (direction: string) => {
-        if (direction === "forward" && currentImageIndex === projectInfo.projectImage.length - 1) {
-            setCurrentImage(projectInfo.projectImage[0]);
-            setCurrentImageIndex(0);
-        } else if (direction === "back" && currentImageIndex === 0) {
-            setCurrentImage(projectInfo.projectImage[projectInfo.projectImage.length - 1]);
-            setCurrentImageIndex(projectInfo.projectImage.length - 1);
-        } else if (direction === "forward") {
-            setCurrentImage(projectInfo.projectImage[currentImageIndex + 1]);
-            setCurrentImageIndex(currentImageIndex + 1);
-        } else {
-            setCurrentImage(projectInfo.projectImage[currentImageIndex - 1]);
-            setCurrentImageIndex(currentImageIndex - 1);
-        }
-    };
-
     return (
         <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
             <ModalOverlay />

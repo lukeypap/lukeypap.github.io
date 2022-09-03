@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, HStack, Stack, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Link, Stack, Text, useColorMode } from "@chakra-ui/react";
 import { Link as ReactScrollLink } from "react-scroll";
 import "../AnimateLetters/textAnimation.scss";
 
@@ -53,9 +53,15 @@ export default function NavBar() {
                             >
                                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                             </Button>
-                            <Button variant="outline" className={`text-animate _${5}`}>
-                                <Text>CV</Text>
-                            </Button>
+                            <a href={"../../resources/lukepapaoikonomucv.pdf"} download>
+                                <Button
+                                    variant="outline"
+                                    className={`text-animate _${5}`}
+                                    style={{ textDecoration: "none" }}
+                                >
+                                    CV
+                                </Button>
+                            </a>
                         </Stack>
                     </Flex>
                 </Flex>
