@@ -1,4 +1,4 @@
-import { Box, Container, Heading, HStack, Icon, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Container, Heading, HStack, Text, useColorMode } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import singleWaveAbout from "../../resources/singleWaveAbout.svg";

@@ -3,7 +3,6 @@ import {
     chakra,
     Container,
     IconButton,
-    Link,
     Stack,
     Text,
     useColorModeValue,

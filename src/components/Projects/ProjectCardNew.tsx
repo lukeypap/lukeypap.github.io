@@ -9,11 +9,13 @@ import {
     Badge,
     Button,
     Link,
+    useDisclosure,
 } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import ProjectModal from "./ProjectModal";
 
-interface props {
+interface projectInfo {
     title: string;
     description: string;
     tech: string[];
@@ -31,12 +33,31 @@ export default function ProjectCardNew({
     githubLink,
     demoInfo,
     timeScale,
-}: props) {
+}: projectInfo) {
     const projectRef = useRef(null);
     const projectIsInView = useInView(projectRef, { once: true });
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Center py={6} _hover={{ transform: "scale(1.05,1.05)" }} style={{ transition: "1s" }}>
+        <Center
+            py={6}
+            _hover={{ transform: "scale(1.05,1.05)", cursor: "pointer" }}
+            style={{ transition: "1s" }}
+            onClick={onOpen}
+        >
+            <ProjectModal
+                isOpen={isOpen}
+                onClose={onClose}
+                projectInfo={{
+                    title,
+                    description,
+                    tech,
+                    projectImage,
+                    githubLink,
+                    demoInfo,
+                    timeScale,
+                }}
+            />
             <Box
                 maxW={"445px"}
                 w={"full"}
