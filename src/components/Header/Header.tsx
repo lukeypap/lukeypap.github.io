@@ -1,6 +1,5 @@
-import { Box, Button, Container, HStack, Image, Text } from "@chakra-ui/react";
-import { useState } from "react";
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
+import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Link, scroller } from "react-scroll";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import "../AnimateLetters/textAnimation.scss";
 import "../Header/header.scss";
@@ -32,7 +31,14 @@ const Header = () => {
 
     return (
         <>
-            <Box pt="100px" height="72vh">
+            <Box
+                pt="100px"
+                height="90vh"
+                backgroundImage={headerSVG}
+                style={{ backgroundSize: "1920px 300px" }}
+                backgroundPosition={"bottom"}
+                backgroundRepeat={"no-repeat"}
+            >
                 <HStack justifyContent={"center"} h="80%">
                     <Box pt={5} w="40%">
                         <Text
@@ -147,7 +153,7 @@ const Header = () => {
                     </Box>
                 </HStack>
             </Box>
-            <Image src={headerSVG} />
+            {/* <Image src={headerSVG} /> */}
         </>
     );
 };

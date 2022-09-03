@@ -31,7 +31,6 @@ const About = () => {
 
     return (
         <Box
-            h="1400px"
             bgImage={singleWaveAbout}
             backgroundRepeat={"no-repeat"}
             backgroundSize={"cover"}
@@ -39,10 +38,11 @@ const About = () => {
             justifyContent={"center"}
             id="about"
             ref={aboutHeaderRef}
+            mb={"100px"}
         >
             {aboutHeaderIsInView ? (
                 <>
-                    <Container maxWidth={"6xl"} pl="100px" margin={"0 auto"} mt={"220px"}>
+                    <Container maxWidth={"6xl"} margin={"0 auto"} mt={"160px"}>
                         <AnimateLetters wordArray={headerArray} id={1} color="#1A202C" />
                         <Text
                             display="inline-block"
@@ -73,7 +73,7 @@ const About = () => {
                             <Heading
                                 mb={"20px"}
                                 borderBottom={"4px"}
-                                w="50%"
+                                w={{ base: "100%", md: "50%" }}
                                 borderColor={colorMode === "dark" ? "#8a9b37" : "#C7DE50"}
                                 lineHeight={"8px"}
                                 color={colorMode === "light" ? "" : "gray.100"}

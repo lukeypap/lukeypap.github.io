@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link as ReactScrollLink } from "react-scroll";
@@ -21,12 +21,13 @@ const Projects = () => {
             w={"100%"}
             display={"flex"}
             justifyContent={"center"}
-            height={{ base: "1800px", md: "800px" }}
             ref={projectHeaderRef}
             id="projects"
+            backgroundImage={projectWaveSvg}
+            backgroundRepeat={"no-repeat"}
         >
             {projectHeaderIsInView ? (
-                <Container maxWidth={"6xl"} position={"absolute"}>
+                <Container maxWidth={"6xl"}>
                     <AnimateLetters wordArray={headerArray} color="" id={1} />
                     <Text
                         display="inline-block"
@@ -99,8 +100,6 @@ const Projects = () => {
             ) : (
                 ""
             )}
-
-            <Image src={projectWaveSvg} objectFit={"cover"} h="50%" w="100%" />
         </Box>
     );
 };

@@ -1,15 +1,5 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import {
-    Box,
-    Button,
-    Flex,
-    HStack,
-    Link,
-    Stack,
-    Text,
-    useColorMode,
-    useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Stack, Text, useColorMode } from "@chakra-ui/react";
 import { Link as ReactScrollLink } from "react-scroll";
 import "../AnimateLetters/textAnimation.scss";
 
