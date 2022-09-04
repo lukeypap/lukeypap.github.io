@@ -39,12 +39,7 @@ export default function ProjectCardNew({
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Center
-            py={6}
-            _hover={{ transform: "scale(1.05,1.05)", cursor: "pointer" }}
-            style={{ transition: "1s" }}
-            onClick={onOpen}
-        >
+        <Center py={6} _hover={{ transform: "scale(1.05,1.05)" }} style={{ transition: "1s" }}>
             <ProjectModal
                 isOpen={isOpen}
                 onClose={onClose}
@@ -116,13 +111,18 @@ export default function ProjectCardNew({
                     ))}
                 </Stack>
                 <Stack direction={"row"} justifyContent={"center"} mt="5">
+                    <Button colorScheme={"messenger"} onClick={onOpen} mr="2" variant={"outline"}>
+                        View More
+                    </Button>
                     <Link href={githubLink} style={{ textDecoration: "none" }}>
                         <Button colorScheme={"messenger"} mr="2" variant={"outline"}>
                             Github
                         </Button>
                     </Link>
                     <Link href={demoInfo.demoLink} style={{ textDecoration: "none" }}>
-                        <Button colorScheme={"messenger"}>Demo</Button>
+                        <Button colorScheme={"messenger"} onClick={onClose}>
+                            Demo
+                        </Button>
                     </Link>
                 </Stack>
             </Box>
