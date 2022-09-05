@@ -15,7 +15,7 @@ export const projectList = [
     {
         name: "Ticket System",
         description:
-            "A simple ticket system that is used to track bugs and issues. Has a user management system with authentication. Demo unavailable as this is still under development.",
+            "A simple ticket system that is used to track bugs and issues. Has a user management system with authentication. Still in development but feel free to take a look!",
         techUsed: ["React", "NestJS", "Postgresql", "ChakraUI", "NextJs"],
         screenshotLocation: [
             ticketSystemScreenshot,
@@ -25,7 +25,7 @@ export const projectList = [
         ],
         githubLink: "https://github.com/lukeypap/ticket-system",
         demo: {
-            demoLink: "",
+            demoLink: "https://ticket-system-pink.vercel.app/",
             demoable: true,
         },
     },
